@@ -92,3 +92,82 @@ for (let ninja of ninjaTurtles)
 {
     console.log(ninja.toUpperCase())
 }
+
+//-----------------------
+// Methods, Revisited
+// -----------------------
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas',
+'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus',
+'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+
+// Console log: the index of Titanic
+function checkIndex(value,index)
+{
+    // if value is Titanic, then print the index
+    if (value === 'Titanic')
+    {
+        console.log("Index of Titanic is: " + index)
+    }
+}
+// Using forEach to get value and index of each array element
+favMovies.forEach(checkIndex)
+
+// 1. use the .sort method Thought question: what did this do to the array? Did it permanently alter it?
+favMovies.sort()
+
+// .sort() method sorted the array element in alphabetical order. This method permanently alters the array elements.
+// Console log below shows the fanMovies array is now in alphabetical order.
+console.log(favMovies)
+
+// 2. Use the method pop
+favMovies.pop() // removed the last element 'Volver'
+
+// 3. push "Guardians of the Galaxy"
+favMovies.push("Guardians of the Galaxy") // added "Guardians of the Galaxy" at the end of the array
+
+// 4. Reverse the array
+favMovies.reverse() // reversed the array elements and now "Guardians of the Galaxy" is the first element
+
+// 5. Use the shift method
+favMovies.shift() // removed the first array element which is "Guardians of the Galaxy"
+
+// 6. unshift - what does it return?
+const unshiftValue = favMovies.unshift("Godfather") 
+console.log("unshift() return value: " + unshiftValue) // it added the given element, here 'Godfather' to the start of the array 
+                                                    //    and returned the length of updated array. It permanently altered the array.
+
+// 7. splice "Django Unchained" and add "Avatar" //TODO
+
+// get the index of "Django Unchained"
+const indexDjango = favMovies.indexOf('Django Unchained')
+
+// at position indexDjango, remove the element and add Avatar in its place (in short, replace Django Unchained with Avatar)
+favMovies.splice(indexDjango, 1, 'Avatar' )
+// yes it permanently altered the array
+
+// 8. slice the last half of the array //TODO
+const middle = Math.round((favMovies.length) / 2)
+favMovies.slice(middle)
+// no slice() doesn't permanently alter the array, it returns the selected portion of array elements
+
+// 9. //TODO
+const slicedArray = favMovies.slice(middle)
+console.log(slicedArray) // gives the last half elements of the array from index middle (here, index 10) to end of the array
+
+// 10. console.log your final results
+console.log(favMovies)
+
+// console.log the index of "Fast and Furious"  //TODO
+console.log(favMovies.indexOf("Fast and Furious"))  
+// we didn't remove Fast and Furious since slice doesn't alter the array. We get the index of Fast and Furios as index 14
+
+// we declared the variable favMovies with const, and yet, we were allowed to change the array.
+// Declaring an array with const still lets use re-assign/update its elements because the array variable, in this case favMovies,
+// doesn't hold the array elements/values. favMovies variable holds the memeory address of the first array element or the reference to the array.
+// Hence, chaning array elements isn't changing the reference and so it is not chnaging the const value
+
+
+
+
+
+
