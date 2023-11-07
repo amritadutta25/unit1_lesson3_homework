@@ -167,6 +167,27 @@ console.log(favMovies.indexOf("Fast and Furious"))
 // Hence, chaning array elements isn't changing the reference and so it is not chnaging the const value
 
 
+//-----------------------
+// Where is Waldo
+// -----------------------
+const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+                    ["Lucinda", "Jacc", "Neff", "Snoop"],
+                    ["Petunia", ["Baked Goods", "Waldo"]]];
+
+
+// Remove Eggbert (hint look at the slice/splice method(s))
+whereIsWaldo.splice(1,1) // whereIsWaldo.splice(index to be removed, no. of elements to remove)
+
+// Change "Neff" to "No One"
+whereIsWaldo[1].splice(2,1,"No One")  // whereIsWaldo.splice(index to be replaced, no. of elements to remove, string to replace the element)
+console.log(whereIsWaldo)
+
+// Access and console.log "Waldo"
+console.log(whereIsWaldo[2][1][1])  // 2 gives ["Petunia", ["Baked Goods", "Waldo"]], 1 gives ["Baked Goods", "Waldo"], 1 gives "Waldo"
+
+
+
+
 
 
 
