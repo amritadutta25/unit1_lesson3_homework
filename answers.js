@@ -77,3 +77,18 @@ dart.push("Hawkins")
 wolfy[0] = "Gameboy"
 
 console.log(plantee, wolfy, dart)
+
+
+//-----------------------
+// Yell at the Ninja Turtles
+// -----------------------
+
+// 1. Create an array with the members of the ninja turtles (Donatello, Leonardo, Raphael, Michaelangelo)
+const ninjaTurtles = ["Donatello", "Leonardo", "Raphael", "Michaelangelo"]
+
+// 2. Use a for of loop (not a typo - try it out! Try a for of loop) to call toUpperCase() on each of them and print out the result.
+
+for (let ninja of ninjaTurtles)
+{
+    console.log(ninja.toUpperCase())
+}
