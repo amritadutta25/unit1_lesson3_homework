@@ -14,7 +14,7 @@ for (let i=1; i<=20; i++)
 // -----------------------
 
 // Write a for loop that will log only the even numbers in 0 through 200.
-for (let i=0; i<=200; i=i+2)
+for (let i=0; i<=200; i=i+2) // increasing i by 2 gives even numbers
 {
     console.log(i)
 }
@@ -120,7 +120,7 @@ favMovies.sort()
 console.log(favMovies)
 
 // 2. Use the method pop
-favMovies.pop() // removed the last element 'Volver'
+favMovies.pop() // removed the last element 'Volver' and permanently alters the array
 
 // 3. push "Guardians of the Galaxy"
 favMovies.push("Guardians of the Galaxy") // added "Guardians of the Galaxy" at the end of the array
@@ -132,11 +132,11 @@ favMovies.reverse() // reversed the array elements and now "Guardians of the Gal
 favMovies.shift() // removed the first array element which is "Guardians of the Galaxy"
 
 // 6. unshift - what does it return?
-const unshiftValue = favMovies.unshift("Godfather") 
+const unshiftValue = favMovies.unshift("Godfather") // adding 'Godfather' to the beginning of the array
 console.log("unshift() return value: " + unshiftValue) // it added the given element, here 'Godfather' to the start of the array 
                                                     //    and returned the length of updated array. It permanently altered the array.
 
-// 7. splice "Django Unchained" and add "Avatar" //TODO
+// 7. splice "Django Unchained" and add "Avatar" 
 
 // get the index of "Django Unchained"
 const indexDjango = favMovies.indexOf('Django Unchained')
@@ -145,21 +145,21 @@ const indexDjango = favMovies.indexOf('Django Unchained')
 favMovies.splice(indexDjango, 1, 'Avatar' )
 // yes it permanently altered the array
 
-// 8. slice the last half of the array //TODO
+// 8. slice the last half of the array
 const middle = Math.round((favMovies.length) / 2)
 favMovies.slice(middle)
 // no slice() doesn't permanently alter the array, it returns the selected portion of array elements
 
-// 9. //TODO
+// 9.
 const slicedArray = favMovies.slice(middle)
 console.log(slicedArray) // gives the last half elements of the array from index middle (here, index 10) to end of the array
 
 // 10. console.log your final results
 console.log(favMovies)
 
-// console.log the index of "Fast and Furious"  //TODO
+// console.log the index of "Fast and Furious"
 console.log(favMovies.indexOf("Fast and Furious"))  
-// we didn't remove Fast and Furious since slice doesn't alter the array. We get the index of Fast and Furios as index 14
+// we didn't remove Fast and Furious since 'slice' doesn't alter the array. We get the index of Fast and Furios as index 14
 
 // we declared the variable favMovies with const, and yet, we were allowed to change the array.
 // Declaring an array with const still lets use re-assign/update its elements because the array variable, in this case favMovies,
@@ -207,6 +207,10 @@ for (let i=1; i<=20; i++)
     {   
         const randomTalk = Math.round(Math.random()*(kittyTalk.length-1))
         console.log(kittyTalk[randomTalk])
+    }
+    else
+    {
+        console.log("Love me, pet me! HSSSSSS!")
     }
 }
 
